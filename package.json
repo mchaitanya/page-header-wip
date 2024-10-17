@@ -22,6 +22,7 @@
     "@cds/core": "^6.13.0",
     "@clr/angular": "^17.3.1",
     "@clr/ui": "^17.3.1",
+    "@dpa/ui-common": "file:ui-common.tar",
     "@tinkoff/ng-event-plugins": "^3.2.0",
     "lodash-es": "^4.17.21",
     "rxjs": "~7.8.0",
