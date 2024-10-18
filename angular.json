@@ -39,6 +39,7 @@
               "node_modules/@cds/core/global.min.css",
               "node_modules/@cds/core/styles/theme.dark.min.css",
               "node_modules/@clr/ui/clr-ui.min.css",
+              "node_modules/@dpa/ui-common/styles/vision/vsn-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
