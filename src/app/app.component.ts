@@ -1,13 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ClarityIcons, refreshIcon } from '@cds/core/icon';
+import { ClarityModule } from '@clr/angular';
+import { ThemeToggleComponent, ThemeType } from '@dpa/ui-common/theme-toggle';
+
+ClarityIcons.addIcons(refreshIcon);
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  standalone: true,
+  imports: [ClarityModule, ThemeToggleComponent],
 })
 export class AppComponent {
-  title = 'page-header-wip';
+  public theme = ThemeType.LIGHT;
+
+  public toggleVisionTheme(isEnabled: boolean) {
+    if (isEnabled) {
+      document.body.setAttribute('vsn-theme', '');
+    } else {
+      document.body.removeAttribute('vsn-theme');
+    }
+  }
+
+  public onThemeChange(theme: ThemeType) {
+    document.body.setAttribute('cds-theme', theme);
+    this.theme = theme;
+  }
 }

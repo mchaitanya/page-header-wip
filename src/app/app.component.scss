@@ -1,0 +1,22 @@
+header {
+  flex: 1;
+}
+
+.header-actions {
+  flex: 1 !important;
+  align-items: center;
+  > clr-toggle-container {
+    margin-top: 0;
+  }
+}
+
+.text-gray {
+  color: var(--cds-global-color-warm-gray-100);
+  user-select: none;
+}
+
+:host-context(body[vsn-theme]) {
+  .text-gray {
+    color: unset !important;
+  }
+}
